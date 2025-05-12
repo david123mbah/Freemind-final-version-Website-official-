@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Services = () => {
   const services = [
     {
@@ -23,7 +25,13 @@ const Services = () => {
   ];
 
   return (
-    <div className="w-full py-12 font-bricolage">
+    <motion.div
+      className="w-full py-12 font-bricolage"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12 font-bricolage">
           <span className="text-sm uppercase tracking-wider text-teal-800 font-semibold font-bricolage">
@@ -41,58 +49,87 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } },
+            hidden: {},
+          }}
+        >
           {/* Mindfulness & Meditation Card */}
-          <div className="bg-orange-100 border border-orange-200 rounded-[30px] p-8 relative overflow-hidden flex flex-col min-h-[320px] font-bricolage">
-            <div className="z-10 relative">
-              <h3 className="text-2xl font-semibold text-teal-900 font-bricolage">
-                Mindfulness &<br />
-                Meditation
-              </h3>
-              <p className="mt-4 text-teal-900/80 font-bricolage">
-                Guided meditation sessions
-                <br />
-                and stress management
-                <br />
-                techniques.
-              </p>
-              <button className="mt-6 px-6 py-2 border border-teal-800 text-teal-800 rounded-[30px] hover:bg-teal-800 hover:text-white transition-colors font-bricolage">
-                Learn More
-              </button>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="bg-orange-100 border border-orange-200 rounded-[30px] p-8 relative overflow-hidden flex flex-col min-h-[320px] font-bricolage">
+              <div className="z-10 relative">
+                <h3 className="text-2xl font-semibold text-teal-900 font-bricolage">
+                  Mindfulness &<br />
+                  Meditation
+                </h3>
+                <p className="mt-4 text-teal-900/80 font-bricolage">
+                  Guided meditation sessions
+                  <br />
+                  and stress management
+                  <br />
+                  techniques.
+                </p>
+                <button className="mt-6 px-6 py-2 border border-teal-800 text-teal-800 rounded-[30px] hover:bg-teal-800 hover:text-white transition-colors font-bricolage">
+                  Learn More
+                </button>
+              </div>
+              <div className="absolute bottom-4 right-4 opacity-70">
+                <img
+                  src={services[0].icon}
+                  alt="Meditation icons"
+                  className="w-204 h-204"
+                />
+              </div>
             </div>
-            <div className="absolute bottom-4 right-4 opacity-70">
-              <img
-                src={services[0].icon}
-                alt="Meditation icons"
-                className="w-204 h-204"
-              />
-            </div>
-          </div>
+          </motion.div>
 
           {/* One-on-One Therapy Card */}
-          <div className="bg-white border border-gray-200 rounded-[30px] p-8 relative overflow-hidden flex flex-col min-h-[320px] font-bricolage">
-            <div className="z-10 relative">
-              <h3 className="text-2xl font-semibold text-teal-900 font-bricolage">
-                One-on-One
-                <br />
-                Therapy
-              </h3>
-              <p className="mt-4 text-teal-900/80 font-bricolage">
-                Virtual and in-person therapy
-                <br />
-                sessions with licensed
-                <br />
-                professionals.
-              </p>
-              <button className="mt-6 px-6 py-2 border border-teal-800 text-teal-800 rounded-[30px] hover:bg-teal-800 hover:text-white transition-colors font-bricolage">
-                Learn More
-              </button>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="bg-white border border-gray-200 rounded-[30px] p-8 relative overflow-hidden flex flex-col min-h-[320px] font-bricolage">
+              <div className="z-10 relative">
+                <h3 className="text-2xl font-semibold text-teal-900 font-bricolage">
+                  One-on-One
+                  <br />
+                  Therapy
+                </h3>
+                <p className="mt-4 text-teal-900/80 font-bricolage">
+                  Virtual and in-person therapy
+                  <br />
+                  sessions with licensed
+                  <br />
+                  professionals.
+                </p>
+                <button className="mt-6 px-6 py-2 border border-teal-800 text-teal-800 rounded-[30px] hover:bg-teal-800 hover:text-white transition-colors font-bricolage">
+                  Learn More
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Wellness Coaching - Full Width Card */}
-        <div className="mt-8">
+        <motion.div
+          className="mt-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+        >
           <div className="bg-white border border-gray-200 rounded-[30px] p-8 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center font-bricolage">
             <div className="z-10 relative">
               <h3 className="text-2xl font-semibold text-teal-900 font-bricolage">
@@ -120,9 +157,9 @@ const Services = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

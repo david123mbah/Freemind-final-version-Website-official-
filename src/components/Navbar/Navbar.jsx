@@ -1,17 +1,23 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Therapists', path: '/therapists' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Therapists", path: "/therapists" },
+    { name: "Resources", path: "/resources" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <nav className="bg-[#F7F6F4] font-bricolage">
+    <motion.nav
+      className="bg-[#F7F6F4] font-bricolage"
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left nav links (fixed width) */}
@@ -29,7 +35,10 @@ const Navbar = () => {
 
           {/* Center logo */}
           <div className="flex-shrink-0 text-center w-1/3">
-            <a href="/" className="font-bold text-2xl text-[#00373E] hover:text-[#004a54] transition-colors font-bricolage">
+            <a
+              href="/"
+              className="font-bold text-2xl text-[#00373E] hover:text-[#004a54] transition-colors font-bricolage"
+            >
               Freemind
             </a>
           </div>
@@ -68,7 +77,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
