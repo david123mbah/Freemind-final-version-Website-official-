@@ -37,6 +37,9 @@ export const theme = {
         },
       },
     },
+    fontFamily: {
+      bricolage: ["Bricolage Grotesque", "sans-serif"],
+    },
   },
   colors: {
     ...colors,

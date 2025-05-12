@@ -11,7 +11,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#F7F6F4]">
+    <nav className="bg-[#F7F6F4] font-bricolage">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left nav links (fixed width) */}
@@ -20,7 +20,7 @@ const Navbar = () => {
               <a
                 key={index}
                 href={link.path}
-                className="text-[#00373E] hover:text-[#004a54] px-4 py-2 text-sm font-medium transition-colors"
+                className="text-[#00373E] hover:text-[#004a54] px-4 py-2 text-sm font-medium transition-colors font-bricolage"
               >
                 {link.name}
               </a>
@@ -29,7 +29,7 @@ const Navbar = () => {
 
           {/* Center logo */}
           <div className="flex-shrink-0 text-center w-1/3">
-            <a href="/" className="font-bold text-2xl text-[#00373E] hover:text-[#004a54] transition-colors">
+            <a href="/" className="font-bold text-2xl text-[#00373E] hover:text-[#004a54] transition-colors font-bricolage">
               Freemind
             </a>
           </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
               <a
                 key={index}
                 href={link.path}
-                className="text-[#00373E] hover:text-[#004a54] px-4 py-2 text-sm font-medium transition-colors"
+                className="text-[#00373E] hover:text-[#004a54] px-4 py-2 text-sm font-medium transition-colors font-bricolage"
               >
                 {link.name}
               </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center ml-auto">
-            <button className="p-2 rounded-md text-[#00373E] hover:text-[#004a54] focus:outline-none transition-colors">
+            <button className="p-2 rounded-md text-[#00373E] hover:text-[#004a54] focus:outline-none transition-colors font-bricolage">
               <svg
                 className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"

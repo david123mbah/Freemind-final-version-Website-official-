@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative bg-[#F7F6F4] overflow-hidden rounded-[40px] max-w-[1200px] mx-auto mt-10 px-6 py-24">
+    <section className="relative bg-[#F7F6F4] overflow-hidden rounded-[40px] max-w-[1100px] mx-auto mt-10 px-6 py-24 font-bricolage">
       {/* Background Illustration */}
       <img
         src="/Hero.png"
@@ -11,23 +11,23 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-6">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-6 font-bricolage">
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#00373E] leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#00373E] leading-tight font-bricolage">
           Support for Your
           <br />
           Mental Well-being
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg text-[#00373E] max-w-xl leading-relaxed">
+        <p className="text-lg text-[#00373E] max-w-xl leading-relaxed font-bricolage">
           Connect with licensed therapists, counselors,
           <br />
           and wellness coaches to support your journey.
         </p>
 
         {/* CTA */}
-        <button className="bg-[#00373E] text-white px-12 py-3 rounded-[30px] font-medium hover:bg-[#005157] transition-colors">
+        <button className="bg-[#00373E] text-white px-12 py-3 rounded-[30px] font-medium hover:bg-[#005157] transition-colors font-bricolage">
           Get Started
         </button>
       </div>
