@@ -4,6 +4,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Home/Hero";
 import HowItworks from "./components/Home/HowItworks";
+import Services from "./components/Home/Services";
+import Testimonials from "./components/Home/Testimonials";
 
 const App = () => {
   const location = useLocation();
@@ -14,6 +16,8 @@ const App = () => {
       <Navbar />
       <Hero/>
       <HowItworks/>
+      <Services/>
+      <Testimonials/>
       <Routes>
        <Route pa th="/collaborator" element={<Hero/>} />
       </Routes>
