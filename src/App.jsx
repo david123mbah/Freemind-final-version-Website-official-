@@ -10,6 +10,7 @@ import Resources from "./components/Home/Resources";
 import FrequentlyAsked from "./components/Home/FrequentlyAsked";
 import Contact from "./components/Home/Contact";
 import Contactes from "./components/Home/Cotacte";
+import AppVideoCard from "./components/Home/AppScreenshot";
 
 const App = () => {
   const location = useLocation();
@@ -21,12 +22,12 @@ const App = () => {
       <Hero/>
       <HowItworks/>
       <Services/>
+      <AppVideoCard />
       <Testimonials/>
       <Resources/>
       <FrequentlyAsked/>
       <Contactes/>
       <Contact/>
-      
       <Routes>
        <Route pa th="/collaborator" element={<Hero/>} />
       </Routes>

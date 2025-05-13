@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 text-center w-1/3">
             <a
               href="/"
-              className="font-bold text-2xl text-[#00373E] hover:text-[#004a54] transition-colors font-bricolage"
+              className="font-bold text-4xl text-[#00373E] hover:text-[#004a54] transition-colors font-bricolage"
             >
               Freemind
             </a>
