@@ -37,10 +37,31 @@ const Hero = () => {
           and wellness coaches to support your journey.
         </p>
 
-        {/* CTA */}
-        <button className="bg-[#00373E] text-white px-12 py-3 rounded-[30px] font-medium hover:bg-[#005157] transition-colors font-bricolage">
-          Get Started
-        </button>
+        {/* Download Buttons */}
+        <div className="flex space-x-4">
+          <a
+            href="#"
+            className="flex items-center bg-[#00373E] text-white px-6 py-3 rounded-full font-medium hover:bg-[#005157] transition-colors font-bricolage"
+          >
+            <img
+              src="/playstore-icon.png"
+              alt="Play Store"
+              className="w-6 h-6 mr-2"
+            />
+            Play Store
+          </a>
+          <a
+            href="#"
+            className="flex items-center bg-[#00373E] text-white px-6 py-3 rounded-full font-medium hover:bg-[#005157] transition-colors font-bricolage"
+          >
+            <img
+              src="/appstore-icon.png"
+              alt="App Store"
+              className="w-6 h-6 mr-2"
+            />
+            App Store
+          </a>
+        </div>
       </motion.div>
     </motion.section>
   );

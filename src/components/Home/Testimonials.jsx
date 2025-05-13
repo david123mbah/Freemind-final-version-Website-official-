@@ -78,7 +78,7 @@ const Testimonials = () => {
           </p>
         </div>
         <motion.div
-          className="flex justify-center items-stretch gap-6 mb-8"
+          className="flex flex-wrap justify-center items-stretch gap-6 mb-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -90,7 +90,7 @@ const Testimonials = () => {
           {getVisibleTestimonials().map((t, idx) => (
             <motion.div
               key={idx}
-              className={`${t.backgroundColor} p-6 rounded-[30px] relative overflow-hidden w-[320px] flex flex-col items-center font-bricolage shadow-md`}
+              className={`${t.backgroundColor} p-6 rounded-[30px] relative overflow-hidden w-full sm:w-[320px] flex flex-col items-center font-bricolage shadow-md`}
               variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 },
