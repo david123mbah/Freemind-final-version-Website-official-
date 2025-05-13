@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Apple, Play } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -43,22 +44,14 @@ const Hero = () => {
             href="#"
             className="flex items-center bg-[#00373E] text-white px-6 py-3 rounded-full font-medium hover:bg-[#005157] transition-colors font-bricolage"
           >
-            <img
-              src="/playstore-icon.png"
-              alt="Play Store"
-              className="w-6 h-6 mr-2"
-            />
+            <Play className="w-6 h-6 mr-2" />
             Play Store
           </a>
           <a
             href="#"
             className="flex items-center bg-[#00373E] text-white px-6 py-3 rounded-full font-medium hover:bg-[#005157] transition-colors font-bricolage"
           >
-            <img
-              src="/appstore-icon.png"
-              alt="App Store"
-              className="w-6 h-6 mr-2"
-            />
+            <Apple className="w-6 h-6 mr-2" />
             App Store
           </a>
         </div>

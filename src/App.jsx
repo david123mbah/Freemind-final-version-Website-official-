@@ -9,6 +9,7 @@ import Testimonials from "./components/Home/Testimonials";
 import Resources from "./components/Home/Resources";
 import FrequentlyAsked from "./components/Home/FrequentlyAsked";
 import Contact from "./components/Home/Contact";
+import Contactes from "./components/Home/Cotacte";
 
 const App = () => {
   const location = useLocation();
@@ -23,7 +24,9 @@ const App = () => {
       <Testimonials/>
       <Resources/>
       <FrequentlyAsked/>
+      <Contactes/>
       <Contact/>
+      
       <Routes>
        <Route pa th="/collaborator" element={<Hero/>} />
       </Routes>
